@@ -1,0 +1,25 @@
+npm install --global yarn
+
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+
+npm install --location=global yarn
+
+
+
+yarn create vite frontend --template react-ts
+cd frontend
+yarn // montar pacotes
+yarn dev // rodar aplicação
+
+
+
+
+
+
+
+
+	https://www.youtube.com/watch?v=Bmg-6ry12po&t=44s
+
+	https://github.com/devsuperior/sds-dsmeta/tree/main/episodio1
+
+	https://github.com/acenelio/dsmeta-css/blob/main/styles.css
