@@ -15,11 +15,16 @@ yarn dev // rodar aplicação
 
 
 
-
-
-
 	https://www.youtube.com/watch?v=Bmg-6ry12po&t=44s
 
 	https://github.com/devsuperior/sds-dsmeta/tree/main/episodio1
 
 	https://github.com/acenelio/dsmeta-css/blob/main/styles.css
+
+
+
+
+
+LINK BACKEND:	https://dsmeta-jameseng.herokuapp.com/
+
+
