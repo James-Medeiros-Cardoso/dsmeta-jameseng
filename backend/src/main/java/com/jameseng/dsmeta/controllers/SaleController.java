@@ -19,7 +19,7 @@ public class SaleController {
 
 	@Autowired
 	private SaleService service;
-	
+
 	@Autowired
 	private SmsService smsService;
 
@@ -33,23 +33,23 @@ public class SaleController {
 	 */
 
 	@GetMapping
-	public Page<Sale> findSales(
-			@RequestParam(value = "minDate", defaultValue = "") String minDate,
-			@RequestParam(value = "maxDate", defaultValue = "") String maxDate,
-			Pageable pageable) {
+	public Page<Sale> findSales(@RequestParam(value = "minDate", defaultValue = "") String minDate,
+			@RequestParam(value = "maxDate", defaultValue = "") String maxDate, Pageable pageable) {
 		return service.findSales(minDate, maxDate, pageable);
 	}
-	
-	/*@GetMapping("/notification")
-	public void notifySms() {
-		smsService.sendSms();
-	}*/
+
+	/*
+	 * @GetMapping("/notification") public void notifySms() { smsService.sendSms();
+	 * }
+	 */
+
 	
 	@GetMapping("/{id}/notification")
 	public void notifySms(@PathVariable Long id) {
 		smsService.sendSms(id);
 	}
 	
+	// Teste de resposta:
 	/*@GetMapping("/{id}/notification")
 	public String notifySms(@PathVariable Long id) {
 		return smsService.sendSms(id);

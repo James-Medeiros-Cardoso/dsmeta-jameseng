@@ -11,7 +11,7 @@ type props = {
 function handClick(id: number) {
     axios(`${BASE_URL}/sales/${id}/notification`)
         .then(response => {
-            //console.log("SUCESSO!");
+            console.log(response); //teste para verificar resposta
             toast.info("SMS Enviado com sucesso.")
         });
 }
