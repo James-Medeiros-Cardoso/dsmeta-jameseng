@@ -45,14 +45,14 @@ public class SaleController {
 		smsService.sendSms();
 	}*/
 	
-	/*@GetMapping("/{id}/notification")
+	@GetMapping("/{id}/notification")
 	public void notifySms(@PathVariable Long id) {
 		smsService.sendSms(id);
-	}*/
+	}
 	
-	@GetMapping("/{id}/notification")
+	/*@GetMapping("/{id}/notification")
 	public String notifySms(@PathVariable Long id) {
 		return smsService.sendSms(id);
-	}
+	}*/
 
 }

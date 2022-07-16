@@ -28,3 +28,6 @@ yarn dev // rodar aplicação
 LINK BACKEND:	https://dsmeta-jameseng.herokuapp.com/
 
 
+CONTINUAR EM: 40:53
+
+

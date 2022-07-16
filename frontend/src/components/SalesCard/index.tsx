@@ -11,9 +11,9 @@ function SalesCard() {
 
     //data de hoje, mas há um ano atrás:
     const min = new Date(new Date().setDate(new Date().getDate() - 365));
-    const max = new Date();
+    const max = new Date(); //new Date() = data de hoje
 
-    const [minDate, setMinDate] = useState(min); //new Date() = data de hoje
+    const [minDate, setMinDate] = useState(min);
     const [maxDate, setMaxDate] = useState(max);
 
     const [sales, setSales] = useState<Sale[]>([]);
@@ -26,7 +26,7 @@ function SalesCard() {
         const dmin = minDate.toISOString().slice(0, 10);
         //console.log(dmin);
         const dmax = maxDate.toISOString().slice(0, 10);
-        
+
         axios.get(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`)
             .then(response => {
                 //console.log(response.data);
@@ -81,7 +81,7 @@ function SalesCard() {
                                     <td>R$ {sale.amount.toFixed(2)}</td>
                                     <td>
                                         <div className="dsmeta-red-btn-container">
-                                            <NotificationButton />
+                                            <NotificationButton saleId={sale.id} />
                                         </div>
                                     </td>
                                 </tr>
